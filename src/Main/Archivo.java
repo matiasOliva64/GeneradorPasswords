@@ -19,6 +19,14 @@ public class Archivo {
 
         String uso = JOptionPane.showInputDialog(null,"Para que desea usar la contraseña? " +
                 "\n!Si no decea agregar el uso Click en CANCEL¡","Bienvenido a GenPass",JOptionPane.OK_CANCEL_OPTION);
+        try{
+            if(uso == null){
+                JOptionPane.showMessageDialog(null, "!ERROR¡ el valor ingresado es invalido \nGracias por utilizar el programa");
+                System.exit(0);
+            }
+        }catch(NumberFormatException e){
+
+        }
 
         if(uso != null){
             if (!archivo.exists()) {

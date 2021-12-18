@@ -32,6 +32,7 @@ public class GeneratedPassword {
 
             } catch(NumberFormatException e){
                 JOptionPane.showMessageDialog(null, "!ERROR¡ el valor ingresado es invalido \nGracias por utilizar el programa");
+                System.exit(0);
             }
 
         return password.toString();
